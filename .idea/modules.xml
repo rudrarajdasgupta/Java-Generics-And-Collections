@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Java-Generics-And-Collections.iml" filepath="$PROJECT_DIR$/.idea/Java-Generics-And-Collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generics and Collections.iml" filepath="$PROJECT_DIR$/Generics and Collections.iml" />
     </modules>
   </component>
 </project>
