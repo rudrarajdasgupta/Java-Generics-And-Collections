@@ -1,16 +1,28 @@
 package com.collections.threadsafe;
 
-import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class CopyOnWriteArrayListExample {
     public static void main(String[] args) {
-        List<String> list = new CopyOnWriteArrayList<>();
+        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
 
-        list.add("A");
-        list.add("B");
-        list.add("C");
+        // Add elements to the list
+        list.add("Item 1");
+        list.add("Item 2");
+        list.add("Item 3");
 
-        System.out.println("CopyOnWriteArrayList: " + list);
+        // Iterate over the list while allowing concurrent modifications
+        Runnable listProcessor = () -> {
+            for (String item : list) {
+                System.out.println("Processing: " + item);
+                // Perform processing on the item
+            }
+        };
+
+        // Create and start multiple worker threads
+        Thread workerThread1 = new Thread(listProcessor);
+        Thread workerThread2 = new Thread(listProcessor);
+        workerThread1.start();
+        workerThread2.start();
     }
 }

@@ -1,21 +1,14 @@
 package com.generics;
 
 public class Box<T> {
-    private T contents;
+    private T item;
 
-    public void setContents(T contents) {
-        this.contents = contents;
+    public void setItem(T item) {
+        this.item = item;
     }
 
-    public T getContents() {
-        return contents;
-    }
-
-    public static void main(String[] args) {
-        A<String> stringBox = new A<>();
-        stringBox.setContents("Hello, Generics!");
-
-        String message = stringBox.getContents();
-        System.out.println(message);
+    public T getItem() {
+        return item;
     }
 }
+

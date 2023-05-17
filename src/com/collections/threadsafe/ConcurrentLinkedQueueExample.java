@@ -1,16 +1,29 @@
 package com.collections.threadsafe;
 
-import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class ConcurrentLinkedQueueExample {
     public static void main(String[] args) {
-        Queue<String> queue = new ConcurrentLinkedQueue<>();
+        ConcurrentLinkedQueue<String> queue = new ConcurrentLinkedQueue<>();
 
-        queue.add("A");
-        queue.add("B");
-        queue.add("C");
+        // Add elements to the queue
+        queue.add("Task 1");
+        queue.add("Task 2");
+        queue.add("Task 3");
 
-        System.out.println("ConcurrentLinkedQueue: " + queue);
+        // Process tasks concurrently using multiple threads
+        Runnable taskProcessor = () -> {
+            while (!queue.isEmpty()) {
+                String task = queue.poll();
+                System.out.println("Processing: " + task);
+                // Perform task processing
+            }
+        };
+
+        // Create and start multiple worker threads
+        Thread workerThread1 = new Thread(taskProcessor);
+        Thread workerThread2 = new Thread(taskProcessor);
+        workerThread1.start();
+        workerThread2.start();
     }
 }

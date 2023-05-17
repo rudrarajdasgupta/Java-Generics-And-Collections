@@ -1,4 +1,4 @@
-package com.generics;
+package com.collections;
 
 public class ArrayUtil {
     public static <T> void printArray(T[] array) {
