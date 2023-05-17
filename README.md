@@ -6,6 +6,10 @@
 
 ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220526152255/Collections-in-Java1.png)
 
+# Threads
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/threadLifeCycle.jpg)
+
 ### References
 
 * https://docs.oracle.com/javase/8/docs/api/?java/util/Collections.html
