@@ -1,4 +1,4 @@
-package com.collections.map;
+package com.collections.set;
 
 import java.util.SortedSet;
 import java.util.TreeSet;
